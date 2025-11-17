@@ -53,7 +53,7 @@ const aiSpeciesRecognitionFlow = ai.defineFlow(
   {
     name: 'aiSpeciesRecognitionFlow',
     inputSchema: AiSpeciesRecognitionInputSchema,
-    outputSchema: AiSoeciesRecognitionOutputSchema,
+    outputSchema: AiSpeciesRecognitionOutputSchema,
   },
   async input => {
     const {output} = await aiSpeciesRecognitionPrompt(input);
