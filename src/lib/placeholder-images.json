@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A lush forest canopy viewed from above, representing biodiversity.",
+      "imageUrl": "https://images.unsplash.com/photo-1730815048563-3c121b1e3544?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmb3Jlc3QlMjBjYW5vcHl8ZW58MHx8fHwxNzYzMzE3MDI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "forest canopy"
+    },
+    {
+      "id": "feature-upload",
+      "description": "A person using a smartphone to take a picture of a plant in the forest.",
+      "imageUrl": "https://images.unsplash.com/photo-1720110701709-82956c8afeec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjYW1lcmElMjBmb3Jlc3R8ZW58MHx8fHwxNzYzMzY5MTYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "camera forest"
+    },
+    {
+      "id": "feature-ai",
+      "description": "A close-up macro shot of a colorful butterfly on a flower.",
+      "imageUrl": "https://images.unsplash.com/photo-1691176626246-8c8089375fa2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxidXR0ZXJmbHklMjBtYWNyb3xlbnwwfHx8fDE3NjMzNjkxNjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "butterfly macro"
+    },
+    {
+      "id": "feature-visualize",
+      "description": "A tablet displaying various charts and graphs over a blurred nature background.",
+      "imageUrl": "https://images.unsplash.com/photo-1738737271801-d404a575d870?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0YWJsZXQlMjBjaGFydHxlbnwwfHx8fDE3NjMzNjkxNjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tablet chart"
+    },
+    {
+      "id": "feature-map",
+      "description": "A digital map on a screen with multiple pins indicating different locations.",
+      "imageUrl": "https://images.unsplash.com/photo-1553864250-05b20249ee0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYXAlMjBwaW5zfGVufDB8fHx8MTc2MzM2OTE2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "map pins"
+    },
+    {
+      "id": "use-case-researchers",
+      "description": "A scientist in a lab coat analyzing data on a laptop with charts on screen.",
+      "imageUrl": "https://images.unsplash.com/photo-1742206594477-15139139c0df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzY2llbnRpc3QlMjBsYWJ8ZW58MHx8fHwxNzYzMjkzNjk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "scientist lab"
+    },
+    {
+      "id": "use-case-conservationists",
+      "description": "A conservationist in the field looking through binoculars at wildlife.",
+      "imageUrl": "https://images.unsplash.com/photo-1694343801715-0fbb9f1cb672?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBiaW5vY3VsYXJzfGVufDB8fHx8MTc2MzM2OTE2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person binoculars"
+    },
+    {
+      "id": "use-case-students",
+      "description": "A group of students on a field trip, observing nature with a teacher.",
+      "imageUrl": "https://images.unsplash.com/photo-1746155885492-d62fc6e562dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdHVkZW50cyUyMG91dGRvb3JzfGVufDB8fHx8MTc2MzMxMDAxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "students outdoors"
+    }
+  ]
 }
