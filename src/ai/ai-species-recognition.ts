@@ -40,7 +40,7 @@ const aiSpeciesRecognitionPrompt = ai.definePrompt({
   output: {schema: AiSpeciesRecognitionOutputSchema},
   prompt: `You are an expert in species recognition. Analyze the provided image and any additional details to suggest potential species matches.
 
-  {% if additionalDetails %}Additional details: {{{additionalDetails}}}{% endif %}
+  {{#if additionalDetails}}Additional details: {{{additionalDetails}}}{{/if}}
 
   Image: {{media url=photoDataUri}}
 
