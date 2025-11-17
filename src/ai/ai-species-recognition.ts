@@ -24,9 +24,9 @@ const AiSpeciesRecognitionInputSchema = z.object({
 export type AiSpeciesRecognitionInput = z.infer<typeof AiSpeciesRecognitionInputSchema>;
 
 const AiSpeciesRecognitionOutputSchema = z.object({
-  suggestedSpecies: z.array(z.string()).describe('An array of suggested species matches.'),
-  confidenceLevels: z.array(z.number()).describe('An array of confidence levels for each suggested species.'),
-  justification: z.string().describe('A justification for the suggested species matches.'),
+  suggestedSpecies: z.array(z.string()).describe('An array of suggested species matches. Provide at least 3, if possible.'),
+  confidenceLevels: z.array(z.number()).describe('An array of confidence levels (between 0.0 and 1.0) for each suggested species.'),
+  justification: z.string().describe('A brief justification for the top suggested species match.'),
 });
 export type AiSpeciesRecognitionOutput = z.infer<typeof AiSpeciesRecognitionOutputSchema>;
 
@@ -53,7 +53,7 @@ const aiSpeciesRecognitionFlow = ai.defineFlow(
   {
     name: 'aiSpeciesRecognitionFlow',
     inputSchema: AiSpeciesRecognitionInputSchema,
-    outputSchema: AiSpeciesRecognitionOutputSchema,
+    outputSchema: AiSoeciesRecognitionOutputSchema,
   },
   async input => {
     const {output} = await aiSpeciesRecognitionPrompt(input);
