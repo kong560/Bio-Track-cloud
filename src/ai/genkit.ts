@@ -1,8 +1,8 @@
-import {ai} from '@genkit-ai/next';
+import {genkit} from 'genkit';
 import {googleAI} from '@genkit-ai/google-genai';
 
-ai({
-  plugins: [googleAI()],
+const ai = genkit({
+  plugins: [googleAI({apiKey: process.env.GEMINI_API_KEY})],
 });
 
 export {ai};
