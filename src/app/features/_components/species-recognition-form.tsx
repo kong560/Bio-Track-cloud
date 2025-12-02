@@ -103,7 +103,7 @@ export default function SpeciesRecognitionForm() {
             />
              {preview && (
               <div className="relative w-full h-64 mt-4 rounded-md overflow-hidden border">
-                <Image src={preview} alt="Image preview" layout="fill" objectFit="cover" />
+                <Image src={preview} alt="Image preview" fill objectFit="cover" />
               </div>
             )}
             <FormField

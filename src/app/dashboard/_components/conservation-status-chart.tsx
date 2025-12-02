@@ -43,7 +43,7 @@ export default function ConservationStatusChart() {
       <ResponsiveContainer width="100%" height="100%">
         <ChartContainer config={chartConfig}>
             <PieChart>
-                <Tooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
+                <Tooltip content={<ChartTooltipContent nameKey="name" hideLabel />} />
                 <Pie data={data} dataKey="count" nameKey="name" cx="50%" cy="50%" outerRadius={120} innerRadius={80} labelLine={false} >
                     {data.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={entry.color} />
