@@ -12,6 +12,7 @@
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
+import {googleAI} from '@genkit-ai/google-genai';
 
 const AiSpeciesRecognitionInputSchema = z.object({
   photoDataUri: z
@@ -36,6 +37,7 @@ export async function aiSpeciesRecognition(input: AiSpeciesRecognitionInput): Pr
 
 const aiSpeciesRecognitionPrompt = ai.definePrompt({
   name: 'aiSpeciesRecognitionPrompt',
+  model: googleAI('gemini-1.5-flash-latest'),
   input: {schema: AiSpeciesRecognitionInputSchema},
   output: {schema: AiSpeciesRecognitionOutputSchema},
   prompt: `You are an expert in species recognition. Analyze the provided image and any additional details to suggest potential species matches.
