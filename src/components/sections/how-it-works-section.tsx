@@ -1,4 +1,5 @@
 import { ChevronRight, Cpu, PieChart, Upload } from 'lucide-react';
+import React from 'react';
 
 const steps = [
   {
@@ -30,8 +31,8 @@ export default function HowItWorksSection() {
         </div>
         <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-4">
           {steps.map((step, index) => (
-            <>
-              <div key={step.title} className="flex max-w-xs flex-col items-center gap-4 text-center">
+            <React.Fragment key={step.title}>
+              <div className="flex max-w-xs flex-col items-center gap-4 text-center">
                 <div className="rounded-full border-8 border-background bg-primary p-4 text-primary-foreground shadow-md">
                   <step.icon className="h-10 w-10" />
                 </div>
@@ -41,7 +42,7 @@ export default function HowItWorksSection() {
               {index < steps.length - 1 && (
                 <ChevronRight className="hidden h-12 w-12 text-muted-foreground/50 md:block" />
               )}
-            </>
+            </React.Fragment>
           ))}
         </div>
       </div>
