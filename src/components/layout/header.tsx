@@ -8,6 +8,9 @@ export default function Header() {
       <div className="container flex h-16 max-w-7xl items-center justify-between">
         <Logo />
         <div className="flex items-center gap-2">
+          <Button variant="ghost" asChild>
+            <Link href="/dashboard">Dashboard</Link>
+          </Button>
           <Button variant="ghost">Learn More</Button>
           <Button asChild>
             <Link href="/features">Get Started</Link>
