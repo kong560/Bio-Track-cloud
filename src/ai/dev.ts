@@ -2,13 +2,10 @@ import {config} from 'dotenv';
 config();
 
 import {start} from 'genkit';
-import {googleAI} from '@genkit-ai/google-genai';
-import {genkit} from 'genkit';
-
+import {ai} from './genkit';
 import './ai-species-recognition';
 
-genkit({
-  plugins: [googleAI({apiKey: process.env.GEMINI_API_KEY})],
-});
+// This is a dummy call to 'ai' to ensure it's not tree-shaken.
+typeof ai;
 
 start();
