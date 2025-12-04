@@ -1,7 +1,7 @@
 'use client';
 
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from 'recharts';
-import { ChartConfig, ChartContainer, ChartTooltipContent } from '@/components/ui/chart';
+import { ChartConfig, ChartContainer } from '@/components/ui/chart';
 import { eachDayOfInterval, subDays, format } from 'date-fns';
 
 const today = new Date();
@@ -30,7 +30,29 @@ export default function ObservationTrendChart() {
           <AreaChart data={data} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
             <XAxis dataKey="date" tickLine={false} axisLine={false} tickMargin={8} />
             <YAxis />
-            <Tooltip content={<ChartTooltipContent indicator="dot" />} />
+            <Tooltip
+                cursor={{ stroke: 'hsl(var(--border))', strokeWidth: 2, strokeDasharray: '3 3' }}
+                content={({ active, payload, label }) => {
+                  if (active && payload && payload.length) {
+                    return (
+                      <div className="rounded-lg border bg-background p-2 shadow-sm">
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="flex flex-col">
+                            <span className="text-[0.70rem] uppercase text-muted-foreground">
+                              Observations
+                            </span>
+                            <span className="font-bold text-foreground">
+                              {payload[0].value}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  }
+
+                  return null
+                }}
+              />
             <defs>
                 <linearGradient id="fillObservations" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="var(--color-observations)" stopOpacity={0.8}/>
