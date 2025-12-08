@@ -30,9 +30,11 @@ export default function HeroSection() {
             Enabling real-time data collection, storage, and analysis of biodiversity using cutting-edge cloud technology.
           </p>
           <div className="mt-10 flex justify-center gap-4">
-            <Button size="lg">Get Started</Button>
-            <Button size="lg" variant="secondary">
-              Learn More
+            <Button size="lg" asChild>
+              <Link href="/features">Get Started</Link>
+            </Button>
+            <Button size="lg" variant="secondary" asChild>
+              <Link href="/#features">Learn More</Link>
             </Button>
           </div>
         </div>
