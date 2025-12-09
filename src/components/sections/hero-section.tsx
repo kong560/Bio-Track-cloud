@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Link from "next/link";
 
 export default function HeroSection() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
