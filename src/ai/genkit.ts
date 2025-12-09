@@ -1,12 +1,12 @@
-import {genkit} from 'genkit';
-import {googleAI} from '@genkit-ai/google-genai';
+import { genkit } from "genkit";
+import { googleAI } from "@genkit-ai/google-genai";
 
+const apiKey = process.env.GEMINI_API_KEY;
 
-if (!process.env.GEMINI_API_KEY) {
-  throw new Error('GEMINI_API_KEY is not defined in environment variables');
+if (!apiKey) {
+  console.warn("⚠ GEMINI_API_KEY is missing. AI features will not work.");
+}
 
-const ai = genkit({
-  plugins: [googleAI({apiKey: process.env.GEMINI_API_KEY})],
+export const ai = genkit({
+  plugins: [googleAI({ apiKey })],
 });
-
-export {ai};
