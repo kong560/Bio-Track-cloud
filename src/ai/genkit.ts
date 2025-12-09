@@ -1,15 +1,9 @@
-'use server'; // <-- VERY IMPORTANT for Next.js + Amplify
+'use server';
 
-import { genkit } from 'genkit';
-import { googleAI } from '@genkit-ai/google-genai';
-
-const apiKey = process.env.GEMINI_API_KEY;
-
-if (!apiKey) {
-  console.error(" GEMINI_API_KEY is missing in environment variables");
-  throw new Error("GEMINI_API_KEY is not defined");
-}
-
-export const ai = genkit({
-  plugins: [googleAI({ apiKey })],
-});
+// TEMPORARY: disable real AI to debug Amplify
+export const ai = {
+  // you can add dummy methods if needed, e.g.:
+  // async generateText() {
+  //   return { text: "AI temporarily disabled" };
+  // },
+};
